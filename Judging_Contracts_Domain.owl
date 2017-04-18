@@ -1,0 +1,2958 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Domain.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     ontologyIRI="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Domain.owl">
+    <Prefix name="mereology" IRI="http://www.estrellaproject.org/lkif-core/mereology.owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="norm" IRI="http://www.estrellaproject.org/lkif-core/norm.owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="Judging_Contracts_Domain" IRI="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Domain.owl#"/>
+    <Prefix name="expression" IRI="http://www.estrellaproject.org/lkif-core/expression.owl#"/>
+    <Prefix name="Judging_Contracts_Core" IRI="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Adjudication"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Agreement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judgement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Claim"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Outcome"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicially_Qualified"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Jurisdiction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Law_Declaration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Consequence"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Rule"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Material_Circumstance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Art1341-1342_Exception"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contract_Clause"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Efficacious_ViaException"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Exception"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Full_Contract"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Inefficacious"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Inefficacy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonOppressive_Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oppressive_Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relevant_ExArt1341co1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relevant_ExArt1341co2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relevant_ExArt1342co1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relevant_ExArt1342co2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reproducing_LawDisposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Valid_ExArt1341co1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Valid_ExArt1341co2"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="expression:Communicated_Attitude"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="expression:Declaration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="expression:Expression"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="expression:Qualification"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="expression:Qualified"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="norm:Legal_Expression"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="norm:Norm"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applied_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#assumption"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exception"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:attitude"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:evaluated_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:evaluates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:qualified_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:qualifies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mereology:contained_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="norm:allowed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="norm:allows"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="norm:disallowed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="norm:disallows"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AOUMessina_ByteSoftwareHouse_Clause2.020"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AcquedottoPugliese_CC_Clause8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AddedToPrecompiled"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AgenziaImmobiliareD_NG&amp;PF_ClauseX"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alfa_Beta1_Clause8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Arbitration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Art1219co3cc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Art1341co1cc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Art1341co2cc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Art1342co1cc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Art1342co2cc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Art1743cc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AssicurazioniGenerali_Csas_SectionA_Clause2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AutomobilClubEuropeo_GeCapital_ClauseX"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BC_BancaCreditoCooperativo_Clause6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BL_Assitalia_Clause2.8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CG_CarigeAssicurazioni_Clause31"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CG_IntesaVita_Clause6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CdABariII_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CdAFirenzeI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CdAMilanoII_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CdARomaII_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CompetenceDerogation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComunePortoAzzurro_Daneco_Clause21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CondominioViaDelGambero_BM_Clause16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CondominioViaRasori_Santacroce_ClauseX"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ContractWithdrawalForBothParties"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ContractWithdrawalUnilateral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EuropaPalaceHotel_SeatPagineGialle_Clause4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Exception_Limitation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExpertOpinion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#General"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IBIImmobiliare_AACF_ClauseC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ISPB_SAI_clause_12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Inefficacy_ExArt1341co1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Inefficacy_ExArt1341co2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Inefficacy_ExArt1342co2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#International"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Knowable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LLoyd_FF_Clause*"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LLoyd_FF_Contract"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Law180_1993Art2co2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LiabilityLimitation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LimitationTowards3rdParties"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ME_LaSorgente_Clause8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MeAComputer_Cartasi_ClauseX"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NewEdge_FotoVillage_clause12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#No_Arbitration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#No_CompentenceDerogation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#No_ContractWithdrawal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#No_ResponsibilityLimitation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Not_Knowable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Not_Unilateral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NovusWohnbedarfVertriebs_Bspa_Clause3.1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Precompiled"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PrevailsOverPrecompiledClauses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ReproducingLawDisposition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ResponsibilityExtension"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ResponsibilityLimitation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SC_LaPiemonteseAssicurazioni_Clause15f"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#STF_KSBClause10.2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Specific"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SpecificallySigned"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StatutoFIGC_Clause24"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToroAssicurazioni_ImpresaAutoimpianti_ClauseB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribBariIII_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribComoI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribFirenzeIII_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribGenovaI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribIsernia_int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribIsernia_int1.2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribModenaII_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribMondovi_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribMonzaI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribMonzaI_Int2.1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribNapoliI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribNolaII_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribPiacenzaI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribPiacenzaI_Int2.1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribRomaIX_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribSalernoI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribSavonaI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribTorinoIII_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribTorinoIII_Int2.1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribTorinoI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribTorinoVIII_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribTraniI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TribVeneziaI_Int1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Unilateral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VF_BPTR_clauseX"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Contract_Clause"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="mereology:contained_in"/>
+                <Class IRI="#Full_Contract"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Efficacious_ViaException"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <Class IRI="#Inefficacious"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <Class IRI="#Art1341-1342_Exception"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <Class IRI="#Art1341-1342_Exception"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Inefficacious"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                <Class IRI="#Inefficacy"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonOppressive_Status"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                <Class IRI="#NonOppressive_Status"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Relevant_ExArt1341co1"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <NamedIndividual IRI="#General"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <NamedIndividual IRI="#General"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <NamedIndividual IRI="#Not_Knowable"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <NamedIndividual IRI="#Not_Knowable"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <NamedIndividual IRI="#Unilateral"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <NamedIndividual IRI="#Unilateral"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Relevant_ExArt1341co1"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+            <NamedIndividual IRI="#Art1341co1cc"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Relevant_ExArt1341co2"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <Class IRI="#Oppressive_Status"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <Class IRI="#Oppressive_Status"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <NamedIndividual IRI="#General"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <NamedIndividual IRI="#General"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <NamedIndividual IRI="#NotSpecificallySigned"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <NamedIndividual IRI="#NotSpecificallySigned"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <NamedIndividual IRI="#Unilateral"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <NamedIndividual IRI="#Unilateral"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Relevant_ExArt1341co2"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+            <NamedIndividual IRI="#Art1341co2cc"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Relevant_ExArt1342co1"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <NamedIndividual IRI="#AddedToPrecompiled"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <NamedIndividual IRI="#AddedToPrecompiled"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="mereology:contained_in"/>
+                <ObjectUnionOf>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                        <NamedIndividual IRI="#Precompiled"/>
+                    </ObjectHasValue>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                        <NamedIndividual IRI="#Precompiled"/>
+                    </ObjectHasValue>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Relevant_ExArt1342co1"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+            <NamedIndividual IRI="#Art1342co1cc"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Relevant_ExArt1342co2"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <Class IRI="#Relevant_ExArt1342co1"/>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <NamedIndividual IRI="#NotSpecificallySigned"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <NamedIndividual IRI="#NotSpecificallySigned"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Relevant_ExArt1342co2"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+            <NamedIndividual IRI="#Art1342co2cc"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Reproducing_LawDisposition"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Rule"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Rule"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                    <NamedIndividual IRI="#ReproducingLawDisposition"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                    <NamedIndividual IRI="#ReproducingLawDisposition"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Valid_ExArt1341co1"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <ObjectUnionOf>
+                <ObjectUnionOf>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                        <NamedIndividual IRI="#Knowable"/>
+                    </ObjectHasValue>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                        <NamedIndividual IRI="#Knowable"/>
+                    </ObjectHasValue>
+                </ObjectUnionOf>
+                <ObjectUnionOf>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                        <NamedIndividual IRI="#Not_Unilateral"/>
+                    </ObjectHasValue>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                        <NamedIndividual IRI="#Not_Unilateral"/>
+                    </ObjectHasValue>
+                </ObjectUnionOf>
+                <ObjectUnionOf>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                        <NamedIndividual IRI="#Specific"/>
+                    </ObjectHasValue>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                        <NamedIndividual IRI="#Specific"/>
+                    </ObjectHasValue>
+                </ObjectUnionOf>
+                <ObjectUnionOf>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                        <NamedIndividual IRI="#SpecificallySigned"/>
+                    </ObjectHasValue>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                        <NamedIndividual IRI="#SpecificallySigned"/>
+                    </ObjectHasValue>
+                </ObjectUnionOf>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Valid_ExArt1341co1"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <ObjectComplementOf>
+                <Class IRI="#Relevant_ExArt1341co1"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Valid_ExArt1341co2"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <ObjectUnionOf>
+                <ObjectUnionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                        <Class IRI="#NonOppressive_Status"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                        <Class IRI="#NonOppressive_Status"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectUnionOf>
+                <ObjectUnionOf>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                        <NamedIndividual IRI="#Not_Unilateral"/>
+                    </ObjectHasValue>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                        <NamedIndividual IRI="#Not_Unilateral"/>
+                    </ObjectHasValue>
+                </ObjectUnionOf>
+                <ObjectUnionOf>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                        <NamedIndividual IRI="#Specific"/>
+                    </ObjectHasValue>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                        <NamedIndividual IRI="#Specific"/>
+                    </ObjectHasValue>
+                </ObjectUnionOf>
+                <ObjectUnionOf>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+                        <NamedIndividual IRI="#SpecificallySigned"/>
+                    </ObjectHasValue>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+                        <NamedIndividual IRI="#SpecificallySigned"/>
+                    </ObjectHasValue>
+                </ObjectUnionOf>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Valid_ExArt1341co2"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+            <ObjectComplementOf>
+                <Class IRI="#Relevant_ExArt1341co2"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Adjudication"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judgement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Material_Circumstance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judgement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+            <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Material_Circumstance"/>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Art1341-1342_Exception"/>
+        <Class IRI="#Exception"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contract_Clause"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contract_Clause"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+            <Class IRI="#Oppressive_Status"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Efficacious_ViaException"/>
+        <Class IRI="#Inefficacious"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exception"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Full_Contract"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Inefficacious"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Inefficacy"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Consequence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonOppressive_Status"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oppressive_Status"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relevant_ExArt1341co1"/>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relevant_ExArt1341co2"/>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relevant_ExArt1342co1"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relevant_ExArt1342co2"/>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reproducing_LawDisposition"/>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Valid_ExArt1341co1"/>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Valid_ExArt1341co2"/>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#NonOppressive_Status"/>
+        <Class IRI="#Oppressive_Status"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#AOUMessina_ByteSoftwareHouse_Clause2.020"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#AcquedottoPugliese_CC_Clause8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#AddedToPrecompiled"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#AgenziaImmobiliareD_NG&amp;PF_ClauseX"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#Alfa_Beta1_Clause8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#Arbitration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oppressive_Status"/>
+        <NamedIndividual IRI="#Arbitration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Rule"/>
+        <NamedIndividual IRI="#Art1219co3cc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Rule"/>
+        <NamedIndividual IRI="#Art1341co1cc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Rule"/>
+        <NamedIndividual IRI="#Art1341co2cc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Rule"/>
+        <NamedIndividual IRI="#Art1342co1cc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Rule"/>
+        <NamedIndividual IRI="#Art1342co2cc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Rule"/>
+        <NamedIndividual IRI="#Art1743cc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#AssicurazioniGenerali_Csas_SectionA_Clause2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#AutomobilClubEuropeo_GeCapital_ClauseX"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#BC_BancaCreditoCooperativo_Clause6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#BL_Assitalia_Clause2.8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#CG_CarigeAssicurazioni_Clause31"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#CG_IntesaVita_Clause6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#CdABariII_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#CdAFirenzeI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#CdAMilanoII_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#CdARomaII_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#CompetenceDerogation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oppressive_Status"/>
+        <NamedIndividual IRI="#CompetenceDerogation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#ComunePortoAzzurro_Daneco_Clause21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#CondominioViaDelGambero_BM_Clause16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#CondominioViaRasori_Santacroce_ClauseX"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#ContractWithdrawalForBothParties"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oppressive_Status"/>
+        <NamedIndividual IRI="#ContractWithdrawalUnilateral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#EuropaPalaceHotel_SeatPagineGialle_Clause4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#Exception_Limitation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oppressive_Status"/>
+        <NamedIndividual IRI="#Exception_Limitation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#ExpertOpinion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#General"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#IBIImmobiliare_AACF_ClauseC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#ISPB_SAI_clause_12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Inefficacy"/>
+        <NamedIndividual IRI="#Inefficacy_ExArt1341co1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Inefficacy"/>
+        <NamedIndividual IRI="#Inefficacy_ExArt1341co2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Inefficacy"/>
+        <NamedIndividual IRI="#Inefficacy_ExArt1342co2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#International"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Art1341-1342_Exception"/>
+        <NamedIndividual IRI="#International"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#Knowable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#LLoyd_FF_Clause*"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#LLoyd_FF_Contract"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Rule"/>
+        <NamedIndividual IRI="#Law180_1993Art2co2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#LiabilityLimitation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oppressive_Status"/>
+        <NamedIndividual IRI="#LiabilityLimitation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#LimitationTowards3rdParties"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oppressive_Status"/>
+        <NamedIndividual IRI="#LimitationTowards3rdParties"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#ME_LaSorgente_Clause8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#MeAComputer_Cartasi_ClauseX"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#NewEdge_FotoVillage_clause12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonOppressive_Status"/>
+        <NamedIndividual IRI="#No_Arbitration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonOppressive_Status"/>
+        <NamedIndividual IRI="#No_CompentenceDerogation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonOppressive_Status"/>
+        <NamedIndividual IRI="#No_ContractWithdrawal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonOppressive_Status"/>
+        <NamedIndividual IRI="#No_ResponsibilityLimitation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#Not_Knowable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#Not_Unilateral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#NovusWohnbedarfVertriebs_Bspa_Clause3.1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#Precompiled"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Consequence"/>
+        <NamedIndividual IRI="#PrevailsOverPrecompiledClauses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#ReproducingLawDisposition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Art1341-1342_Exception"/>
+        <NamedIndividual IRI="#ReproducingLawDisposition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#ResponsibilityExtension"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#ResponsibilityLimitation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oppressive_Status"/>
+        <NamedIndividual IRI="#ResponsibilityLimitation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#SC_LaPiemonteseAssicurazioni_Clause15f"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#STF_KSBClause10.2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#Specific"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#SpecificallySigned"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#StatutoFIGC_Clause24"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#ToroAssicurazioni_ImpresaAutoimpianti_ClauseB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribBariIII_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribComoI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribFirenzeIII_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribGenovaI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribIsernia_int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribIsernia_int1.2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribModenaII_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribMondovi_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribMonzaI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribMonzaI_Int2.1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribNapoliI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribNolaII_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribPiacenzaI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribPiacenzaI_Int2.1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribRomaIX_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribSalernoI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribSavonaI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribTorinoIII_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribTorinoIII_Int2.1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribTorinoI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribTorinoVIII_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribTraniI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Judicial_Interpretation"/>
+        <NamedIndividual IRI="#TribVeneziaI_Int1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Legal_Status"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Judging_Contracts_Core:Contractual_Agreement"/>
+        <NamedIndividual IRI="#VF_BPTR_clauseX"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#No_ResponsibilityLimitation"/>
+        <NamedIndividual IRI="#ResponsibilityExtension"/>
+    </SameIndividual>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#No_ResponsibilityLimitation"/>
+        <NamedIndividual IRI="#ResponsibilityLimitation"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#AOUMessina_ByteSoftwareHouse_Clause2.020"/>
+        <NamedIndividual IRI="#Arbitration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#AOUMessina_ByteSoftwareHouse_Clause2.020"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#AcquedottoPugliese_CC_Clause8"/>
+        <NamedIndividual IRI="#Arbitration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#Alfa_Beta1_Clause8"/>
+        <NamedIndividual IRI="#SpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#Art1341co1cc"/>
+        <NamedIndividual IRI="#Inefficacy_ExArt1341co1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#Art1341co2cc"/>
+        <NamedIndividual IRI="#Inefficacy_ExArt1341co2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#Art1342co1cc"/>
+        <NamedIndividual IRI="#PrevailsOverPrecompiledClauses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#Art1342co2cc"/>
+        <NamedIndividual IRI="#Inefficacy_ExArt1342co2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#AssicurazioniGenerali_Csas_SectionA_Clause2"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#AssicurazioniGenerali_Csas_SectionA_Clause2"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#AssicurazioniGenerali_Csas_SectionA_Clause2"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#BL_Assitalia_Clause2.8"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#assumption"/>
+        <NamedIndividual IRI="#BL_Assitalia_Clause2.8"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CG_CarigeAssicurazioni_Clause31"/>
+        <NamedIndividual IRI="#ExpertOpinion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CG_IntesaVita_Clause6"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CG_IntesaVita_Clause6"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CG_IntesaVita_Clause6"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CG_IntesaVita_Clause6"/>
+        <NamedIndividual IRI="#Exception_Limitation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CdABariII_Int1"/>
+        <NamedIndividual IRI="#Not_Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#CdABariII_Int1"/>
+        <NamedIndividual IRI="#VF_BPTR_clauseX"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CdAFirenzeI_Int1"/>
+        <NamedIndividual IRI="#Not_Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CdAFirenzeI_Int1"/>
+        <NamedIndividual IRI="#Knowable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CdAFirenzeI_Int1"/>
+        <NamedIndividual IRI="#Specific"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#CdAFirenzeI_Int1"/>
+        <NamedIndividual IRI="#ComunePortoAzzurro_Daneco_Clause21"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CdAMilanoII_Int1"/>
+        <NamedIndividual IRI="#Not_Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#CdAMilanoII_Int1"/>
+        <NamedIndividual IRI="#CondominioViaRasori_Santacroce_ClauseX"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CdARomaII_Int1"/>
+        <NamedIndividual IRI="#ResponsibilityExtension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#CdARomaII_Int1"/>
+        <NamedIndividual IRI="#ToroAssicurazioni_ImpresaAutoimpianti_ClauseB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#ComunePortoAzzurro_Daneco_Clause21"/>
+        <NamedIndividual IRI="#Arbitration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CondominioViaDelGambero_BM_Clause16"/>
+        <NamedIndividual IRI="#Arbitration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CondominioViaRasori_Santacroce_ClauseX"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CondominioViaRasori_Santacroce_ClauseX"/>
+        <NamedIndividual IRI="#Arbitration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#CondominioViaRasori_Santacroce_ClauseX"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#EuropaPalaceHotel_SeatPagineGialle_Clause4"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#IBIImmobiliare_AACF_ClauseC"/>
+        <NamedIndividual IRI="#SpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#ISPB_SAI_clause_12"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#LLoyd_FF_Clause*"/>
+        <NamedIndividual IRI="#AddedToPrecompiled"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mereology:contained_in"/>
+        <NamedIndividual IRI="#LLoyd_FF_Clause*"/>
+        <NamedIndividual IRI="#LLoyd_FF_Contract"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#LLoyd_FF_Contract"/>
+        <NamedIndividual IRI="#Precompiled"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#ME_LaSorgente_Clause8"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#ME_LaSorgente_Clause8"/>
+        <NamedIndividual IRI="#CompetenceDerogation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#ME_LaSorgente_Clause8"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#MeAComputer_Cartasi_ClauseX"/>
+        <NamedIndividual IRI="#Precompiled"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#MeAComputer_Cartasi_ClauseX"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#MeAComputer_Cartasi_ClauseX"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#MeAComputer_Cartasi_ClauseX"/>
+        <NamedIndividual IRI="#ContractWithdrawalForBothParties"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#NewEdge_FotoVillage_clause12"/>
+        <NamedIndividual IRI="#CompetenceDerogation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#NewEdge_FotoVillage_clause12"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#NewEdge_FotoVillage_clause12"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#NovusWohnbedarfVertriebs_Bspa_Clause3.1"/>
+        <NamedIndividual IRI="#LimitationTowards3rdParties"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#SC_LaPiemonteseAssicurazioni_Clause15f"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#SC_LaPiemonteseAssicurazioni_Clause15f"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#SC_LaPiemonteseAssicurazioni_Clause15f"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#STF_KSBClause10.2"/>
+        <NamedIndividual IRI="#CompetenceDerogation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#STF_KSBClause10.2"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#StatutoFIGC_Clause24"/>
+        <NamedIndividual IRI="#Arbitration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribBariIII_Int1"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribBariIII_Int1"/>
+        <NamedIndividual IRI="#AcquedottoPugliese_CC_Clause8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#assumption"/>
+        <NamedIndividual IRI="#TribBariIII_Int1"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#assumption"/>
+        <NamedIndividual IRI="#TribBariIII_Int1"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribComoI_Int1"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribComoI_Int1"/>
+        <NamedIndividual IRI="#ME_LaSorgente_Clause8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribFirenzeIII_Int1"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribFirenzeIII_Int1"/>
+        <NamedIndividual IRI="#LLoyd_FF_Clause*"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribGenovaI_Int1"/>
+        <NamedIndividual IRI="#IBIImmobiliare_AACF_ClauseC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribIsernia_int1"/>
+        <NamedIndividual IRI="#No_CompentenceDerogation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribIsernia_int1"/>
+        <NamedIndividual IRI="#ExpertOpinion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribIsernia_int1.2"/>
+        <NamedIndividual IRI="#CG_CarigeAssicurazioni_Clause31"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribModenaII_Int1"/>
+        <NamedIndividual IRI="#Not_Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribModenaII_Int1"/>
+        <NamedIndividual IRI="#CondominioViaDelGambero_BM_Clause16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribMondovi_Int1"/>
+        <NamedIndividual IRI="#SpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribMondovi_Int1"/>
+        <NamedIndividual IRI="#AutomobilClubEuropeo_GeCapital_ClauseX"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribMonzaI_Int1"/>
+        <NamedIndividual IRI="#Knowable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribMonzaI_Int1"/>
+        <NamedIndividual IRI="#Alfa_Beta1_Clause8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribMonzaI_Int2.1"/>
+        <NamedIndividual IRI="#Art1743cc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribMonzaI_Int2.1"/>
+        <NamedIndividual IRI="#NovusWohnbedarfVertriebs_Bspa_Clause3.1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#exception"/>
+        <NamedIndividual IRI="#TribMonzaI_Int2.1"/>
+        <NamedIndividual IRI="#ReproducingLawDisposition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribNapoliI_Int1"/>
+        <NamedIndividual IRI="#Arbitration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribNapoliI_Int1"/>
+        <NamedIndividual IRI="#BL_Assitalia_Clause2.8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#assumption"/>
+        <NamedIndividual IRI="#TribNapoliI_Int1"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribNolaII_Int1"/>
+        <NamedIndividual IRI="#No_ContractWithdrawal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribNolaII_Int1"/>
+        <NamedIndividual IRI="#MeAComputer_Cartasi_ClauseX"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribNolaII_Int1"/>
+        <NamedIndividual IRI="#ContractWithdrawalForBothParties"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribPiacenzaI_Int1"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribPiacenzaI_Int1"/>
+        <NamedIndividual IRI="#NewEdge_FotoVillage_clause12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribPiacenzaI_Int2.1"/>
+        <NamedIndividual IRI="#Knowable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribPiacenzaI_Int2.1"/>
+        <NamedIndividual IRI="#STF_KSBClause10.2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#exception"/>
+        <NamedIndividual IRI="#TribPiacenzaI_Int2.1"/>
+        <NamedIndividual IRI="#International"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribRomaIX_Int1"/>
+        <NamedIndividual IRI="#Art1219co3cc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribRomaIX_Int1"/>
+        <NamedIndividual IRI="#CG_IntesaVita_Clause6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#exception"/>
+        <NamedIndividual IRI="#TribRomaIX_Int1"/>
+        <NamedIndividual IRI="#ReproducingLawDisposition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribSalernoI_Int1"/>
+        <NamedIndividual IRI="#Law180_1993Art2co2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribSalernoI_Int1"/>
+        <NamedIndividual IRI="#StatutoFIGC_Clause24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#exception"/>
+        <NamedIndividual IRI="#TribSalernoI_Int1"/>
+        <NamedIndividual IRI="#ReproducingLawDisposition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribSavonaI_Int1"/>
+        <NamedIndividual IRI="#SpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribSavonaI_Int1"/>
+        <NamedIndividual IRI="#BC_BancaCreditoCooperativo_Clause6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribTorinoIII_Int1"/>
+        <NamedIndividual IRI="#No_ResponsibilityLimitation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribTorinoIII_Int1"/>
+        <NamedIndividual IRI="#SC_LaPiemonteseAssicurazioni_Clause15f"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribTorinoIII_Int2.1"/>
+        <NamedIndividual IRI="#SpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribTorinoIII_Int2.1"/>
+        <NamedIndividual IRI="#EuropaPalaceHotel_SeatPagineGialle_Clause4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribTorinoI_Int1"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribTorinoI_Int1"/>
+        <NamedIndividual IRI="#LiabilityLimitation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribTorinoI_Int1"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribTorinoI_Int1"/>
+        <NamedIndividual IRI="#ISPB_SAI_clause_12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribTorinoVIII_Int1"/>
+        <NamedIndividual IRI="#Not_Knowable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribTorinoVIII_Int1"/>
+        <NamedIndividual IRI="#NotSpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribTorinoVIII_Int1"/>
+        <NamedIndividual IRI="#Unilateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribTorinoVIII_Int1"/>
+        <NamedIndividual IRI="#General"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribTorinoVIII_Int1"/>
+        <NamedIndividual IRI="#AOUMessina_ByteSoftwareHouse_Clause2.020"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribTraniI_Int1"/>
+        <NamedIndividual IRI="#SpecificallySigned"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribTraniI_Int1"/>
+        <NamedIndividual IRI="#AgenziaImmobiliareD_NG&amp;PF_ClauseX"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <NamedIndividual IRI="#TribVeneziaI_Int1"/>
+        <NamedIndividual IRI="#LiabilityLimitation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <NamedIndividual IRI="#TribVeneziaI_Int1"/>
+        <NamedIndividual IRI="#AssicurazioniGenerali_Csas_SectionA_Clause2"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applied_by"/>
+        <ObjectProperty abbreviatedIRI="expression:qualified_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        <ObjectProperty abbreviatedIRI="expression:qualifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+        <ObjectProperty abbreviatedIRI="expression:qualified_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <ObjectProperty abbreviatedIRI="expression:qualifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#assumption"/>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#exception"/>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="expression:evaluated_by"/>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="expression:evaluates"/>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="norm:allowed_by"/>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="norm:allows"/>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="norm:disallowed_by"/>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="norm:disallows"/>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applied_by"/>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considers"/>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+    </InverseObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:considered_by"/>
+            <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:applies"/>
+        </ObjectPropertyChain>
+        <ObjectProperty abbreviatedIRI="Judging_Contracts_Core:judged_as"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AOUMessina_ByteSoftwareHouse_Clause2.020</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">clause 2.020 of contract between Byte Software House spa and Azienda Ospedaliera Universitaria di messina policlinico Gaetano Martino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AOUMessina_ByteSoftwareHouse_Clause2.020</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">AOU Messina / Byte Software House Clause 2.020</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AcquedottoPugliese_CC_Clause8</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">clause 8 of the contract between Acquedotto Pugliese spa and C. C.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AcquedottoPugliese_CC_Clause8</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Acquedotto Pugliese / CC Clause 8</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AddedToPrecompiled</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause has been manually added to a precompiled contract</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AddedToPrecompiled</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Added to precompiled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AgenziaImmobiliareD_NG&amp;PF_ClauseX</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">clause x of the contract between Agenzia Immobiliare D. di M. D. and N. G., P. F.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AgenziaImmobiliareD_NG&amp;PF_ClauseX</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Agenzia Immobiliare D / NG e PF Clause &#39;x&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Alfa_Beta1_Clause8</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 8 of contract between unknown parties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Alfa_Beta1_Clause8</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Alfa1 / Beta1 clause 8</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Arbitration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause concerns arbitration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Arbitration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Arbitration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Art1219co3cc</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Article 1219 comma 3 Italian Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Art1341-1342_Exception</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Contract clauses applying any of these statuses are pulled out of the scope of application of article 1341 and 1342 civil code.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Art1341-1342_Exception</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Exception to articles 1341 and 1342 civil code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Art1341co1cc</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Articolo 1341 comma 1 Codice Civile: &#39;Le condizioni generali di contratto predisposte da uno dei contraenti sono efficaci nei confronti dell’altro, se al momento della conclusione del contratto questi le ha conosciute o avrebbe dovuto conoscerle usando l’ordinaria diligenza.&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Art1341co1cc</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Article 1341 comma 1 Italian Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Art1341co2cc</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Articolo 1341 comma 2 Codice Civile: &#39;In ogni caso non hanno effetto, se non sono specificamente approvate per iscritto, le condizioni che stabiliscono, a favore di colui che le ha predisposte, limitazioni di responsabilità, facoltà di recedere dal contratto o di sospenderne l&#39;esecuzione, ovvero sanciscono a carico dell&#39;altro contraente decadenze, limitazioni alla facoltà di opporre eccezioni, restrizioni alla libertà contrattuale nei rapporti coi terzi, tacita proroga o rinnovazione del contratto, clausole compromissorie o deroghe alla competenza dell&#39;autorità giudiziaria.&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Art1341co2cc</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Article 1341 comma 2 Italian Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Art1342co1cc</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Articolo 1342 comma 1 Codice Civile: &#39;Nei contratti conclusi mediante la sottoscrizione di moduli o formulari, predisposti per disciplinare in maniera uniforme determinati rapporti contrattuali, le clausole aggiunte al modulo o al formulario prevalgono su quelle del modulo o del formulario qualora siano incompatibili con esse, anche se queste ultime non sono state cancellate.&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Art1342co1cc</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Article 1342 comma 1 Italian Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Art1342co2cc</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Articolo 1342 comma 2 Codice Civile: &quot;Si osserva inoltre la disposizione del secondo comma dell&#39;articolo precedente.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Art1342co2cc</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Article 1342 comma 2 Italian Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Art1743cc</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Articolo 1743 Codice Civile: &quot;Il preponente non può valersi contemporaneamente di più agenti nella stessa zona e per lo stesso ramo di attività, né l&#39;agente può assumere l&#39;incarico di trattare nella stessa zona e per lo stesso ramo gli affari di più imprese in concorrenza tra loro.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Art1743cc</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Article 1743 Italian Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AssicurazioniGenerali_Csas_SectionA_Clause2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 2 of contract between Assicurazione Generali Spa and C. sas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AssicurazioniGenerali_Csas_SectionA_Clause2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Assicurazioni Generali / C. sas Clause 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AutomobilClubEuropeo_GeCapital_ClauseX</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause unknown of contract between Automobil Club Europeo srl and Ge Capital Servizi Finanziari spa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AutomobilClubEuropeo_GeCapital_ClauseX</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">AutomobilClubEuropeo / GeCapital Clause &#39;x&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BC_BancaCreditoCooperativo_Clause6</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 6 of the contract between B. C. and Banca Credito Cooperativo di Alba, Langhe e Roero scrl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BC_BancaCreditoCooperativo_Clause6</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">B.C. / Banca di Credito Cooperativo Clause 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BL_Assitalia_Clause2.8</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 2.8 of contract between B.L. and Assitalia spa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BL_Assitalia_Clause2.8</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">B.L. / Assitalia clause 2.8</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CG_CarigeAssicurazioni_Clause31</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 31 of contract between C. G. and Carige Assicurazioni spa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CG_CarigeAssicurazioni_Clause31</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">C. G. / CarigeAssicurazioni_Clause 31</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CG_IntesaVita_Clause6</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 6 of contract between C. G. and Intesa Vita spa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CG_IntesaVita_Clause6</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">C. G. / Intesavita clause 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CdABariII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Bari, 3rd section in decision n. 461 of May 25th, 2004</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CdABariII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Court of Appeal of Bari Interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CdAFirenzeI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Court of Appeal of Firenze, 1st section, in decision of December 10th, 2004</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CdAFirenzeI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Court of Appeal of Firenze interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CdAMilanoII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">interpretation by the Court of Appeal of Milano 2nd section in decision n. 1154 of April 24th, 2007</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CdAMilanoII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Court of Appeal of Milano interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CdARomaII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Court of Appeal of Rome 2nd section in sentence n. 628 of February 14th, 2008.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CdARomaII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Court of Appeal of Roma interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CompetenceDerogation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause concerns a derogation to the judicial competence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CompetenceDerogation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Competence derogation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ComunePortoAzzurro_Daneco_Clause21</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 21 of contract between Comune di Porto Azzurro and Daneco Gestione Impianti spa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ComunePortoAzzurro_Daneco_Clause21</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Comune Porto Azzurro / Daneco Clause 21</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CondominioViaDelGambero_BM_Clause16</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 16 of contract between Condominio di via del Gambero n. 40 and B. M.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CondominioViaDelGambero_BM_Clause16</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Condominio Via del Gambero / B. M. clause 16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CondominioViaRasori_Santacroce_ClauseX</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">clause unknown of contract between Condominio di via Rasori n. 9 and Impresa Edile Santacroce sas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CondominioViaRasori_Santacroce_ClauseX</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Condominio Via Rasori_ Santacroce_Clause x</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ContractWithdrawalForBothParties</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause allow particular conditions of withdrawal for both parties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ContractWithdrawalForBothParties</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Contract withdrawal for both parties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contract_Clause</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A part of a contract</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Contract_Clause</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Contract Clause</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Efficacious_ViaException</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Contractual agreements classified under this are relevant under some laws which disposes inefficacy, but are nevertheless efficacious because they fall into the scope of some exception.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Efficacious_ViaException</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Efficacious through Exception</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EuropaPalaceHotel_SeatPagineGialle_Clause4</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">clause 4 of contract between Europa Palace Hotel spa and Seat Pagine Gialle spa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EuropaPalaceHotel_SeatPagineGialle_Clause4</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Europa Palace Hotel / Seat Pagine Gialle clause 4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Exception</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An exceptional status: it pulls the expression it is applied to out of some norm´s scope of application.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Exception</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Exception</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Exception_Limitation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause concerns a limitation to the exceptions that can be opposed to the proponant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Exception_Limitation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Limitation to exceptions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ExpertOpinion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause concerns an expert opinion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExpertOpinion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Expert Opinion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Full_Contract</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The expression representing the whole contract. Can be further identified by contract clauses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Full_Contract</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Full Contract</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#General</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause is general (a general condition is common to a series of contracts)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#General</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">General</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IBIImmobiliare_AACF_ClauseC</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause C of contract between IBI Immobiliare Italiana srl and A.A., C. F.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IBIImmobiliare_AACF_ClauseC</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">IBI Immobiliare / A.A. and C. F. clause C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ISPB_SAI_clause_12</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 12 of contract between Istituto Sorveglianza Provinciale Bergamasco spa and SAI spa.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ISPB_SAI_clause_12</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ISPB / SAI clause 12</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Inefficacious</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An agreement (contract or clause) to which the legal consequence ´inefficacy´ has been applied.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Inefficacious</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Inefficacious Agreement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Inefficacy</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The legal consequence of inefficacy: the contractual agreement (or other legal expression) has no effects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Inefficacy</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Inefficacy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Inefficacy_ExArt1341co1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause is inefficacious under article 1341 comma 1 Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Inefficacy_ExArt1341co1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Inefficacy under article 1341 comma 1 Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Inefficacy_ExArt1341co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause is inefficacious under article 1341 comma 2 Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Inefficacy_ExArt1341co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Inefficacy under article 1341 comma 2 Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Inefficacy_ExArt1342co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause is inefficacious under article 1342 comma 2 Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Inefficacy_ExArt1342co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Inefficacy under article 1342 comma 2 Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#International</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The contract is international: its parties are of different countries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#International</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">International</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Knowable</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause was knowable by the other party at the time of the conclusion of the contract by using ordinary diligence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Knowable</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Knowable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LLoyd_FF_Clause*</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause &#39;*&#39; between Lloyd Nazionale Assicurazioni spa and F.F. Consulenze e Assicurazioni sas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LLoyd_FF_Clause*</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Lloyd&#39;s / F.F. clause *</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LLoyd_FF_Contract</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Contract between Lloyd Nazionale Assicurazioni spa and F.F. Consulenze Assicurazioni sas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LLoyd_FF_Contract</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Lloyd&#39;s / F.F. contract</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Law180_1993Art2co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Article 2 comma 2 Law 180/1993</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LiabilityLimitation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause concerns a limitation to the liability of the proponant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LiabilityLimitation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Liability limitation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LimitationTowards3rdParties</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause concerns a limitation to contractual freedom towards third parties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LimitationTowards3rdParties</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Limitation towards third parties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ME_LaSorgente_Clause8</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 8 of contract between M. E. and La Sorgente sas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ME_LaSorgente_Clause8</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">M.E. / La Sorgente clause 8</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MeAComputer_Cartasi_ClauseX</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">clause x of contract between M &amp; A Computer sas and Cartasì spa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MeAComputer_Cartasi_ClauseX</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">M &amp; A Computer / Cartasì Clause &#39;x&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NewEdge_FotoVillage_clause12</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Clause 12 of contract between New Edge di D. F. and Foto Village s.a.s. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewEdge_FotoVillage_clause12</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">New Edge / Foto Village clause 12</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NonOppressive_Status</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">non oppressive status (under the consumer law conception of oppressiveness)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NonOppressive_Status</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Not oppressive </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NotSpecificallySigned</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause has not been specifically signed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NotSpecificallySigned</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Not specifically signed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Not_Knowable</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause was not knowable by the other party at the time of the conclusion of the contract, even using ordinary diligence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Not_Knowable</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Non knowable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Not_Unilateral</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause was not unilaterally predisponed by the proponant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Not_Unilateral</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Not unilateral</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NovusWohnbedarfVertriebs_Bspa_Clause3.1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 3.1 of contract between Novus Wohnbedarf Vertriebs gmbh and B. spa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NovusWohnbedarfVertriebs_Bspa_Clause3.1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Novus Wothnbedarf Vertriebs / B. spa clause 3.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Oppressive_Status</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">oppressive status (under the consumer law conception of oppressiveness)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oppressive_Status</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Oppressive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Precompiled</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Contract was precompiled by the proponant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Precompiled</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Precompiled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PrevailsOverPrecompiledClauses</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An added clause prevails over precompiled clauses of the contract following Article 1342 comma 1 Civil Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PrevailsOverPrecompiledClauses</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Prevails over precompiled clauses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Relevant_ExArt1341co1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">To be relevan uder comma 1 of article 1341 civil code, a clause must be general, unilaterally written by one of the parties, and not knowable by the other party at the time of the conclusion of the contract by using ordinary diligence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Relevant_ExArt1341co1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relevant under article 1341 comma 1 civil code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Relevant_ExArt1341co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">To be relevant under article 1341 comma 2 of civil code a clause must be oppressive, general, unilaterally written by one of the parties and not specifically signed by the other party.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Relevant_ExArt1341co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relevant under article 1341 comma 2 civil code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Relevant_ExArt1342co1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">To be relevant under comma 1 of article 1342 civil code a clause must constitute an addition to a precompiled contract.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Relevant_ExArt1342co1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relevant under article 1342 comma 1 civil code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Relevant_ExArt1342co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">To be relevant under comma 2 of article 1342 civil code a clause must be relevant under comma 1 and not specifically signed by the party which did not prepare the precompiled contract.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Relevant_ExArt1342co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relevant under article 1342 comma 2 civil code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ReproducingLawDisposition</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause reproduces a law disposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ReproducingLawDisposition</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Reproducing law disposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Reproducing_LawDisposition</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">a clause whose content corresponds to that of a law disposition in force.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Reproducing_LawDisposition</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Reproducing law disposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ResponsibilityExtension</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause concerns an extention of the responsibility of the acceptant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ResponsibilityExtension</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Extension of responsibility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ResponsibilityLimitation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause concerns a limitation to the responsibility of the proponant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ResponsibilityLimitation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Limitation of responsibility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SC_LaPiemonteseAssicurazioni_Clause15f</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">clause 15f of contract between S. C. and la Piemontese Assicurazioni spa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SC_LaPiemonteseAssicurazioni_Clause15f</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">S.C. / La Piemontese Assicurazioni Clause 15f</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#STF_KSBClause10.2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">clause 10.2 of contract between STF spa and KSB ag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#STF_KSBClause10.2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">STF / KSB clause 10.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Specific</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause is specific (not general)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Specific</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Specific</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpecificallySigned</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause was specifically signed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SpecificallySigned</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Specifically signed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StatutoFIGC_Clause24</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause 24 of the Statute of the FIGC, Federazione Italiana Giuoco Calcio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StatutoFIGC_Clause24</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Statuto F. I. G. C. clause 24</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ToroAssicurazioni_ImpresaAutoimpianti_ClauseB</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause B of contract between Impresa Autoimpianti di L. A. and Toro Assicurazioni spa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ToroAssicurazioni_ImpresaAutoimpianti_ClauseB</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Toro Assicurazioni / Impresa Autoimpianti clause B</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribBariIII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Bari 3rd section in decision n. 87 of January 15th, 2009</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribBariIII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Bari interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribComoI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Como in decision of May 20th, 2004</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribComoI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Como interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribFirenzeIII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">interpretation by the Tribunal of Firenze 3rd section in decision of November 7th, 2006</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribFirenzeIII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Firenze interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribGenovaI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Genova in decision of February 19th, 2003</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribGenovaI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Genova interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribIsernia_int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation of the Tribunal of Isernia in decision n. 65 of January 20th, 2010</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribIsernia_int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Isernia interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribIsernia_int1.2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation of the Tribunal of Isernia in decision n. 65 of January 20th, 2010</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribIsernia_int1.2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Isernia interpretation 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribModenaII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">interpretation by the Tribunal of Modena 2nd section in decision of November 2nd, 2005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribModenaII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Modena interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribMondovi_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">interpretation of the Tribunal of Mondovì in decision of November 14th, 2006</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribMondovi_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Mondovì interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribMonzaI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Monza in decision of January 21st, 2003</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribMonzaI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Monza interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribMonzaI_Int2.1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">interpretation by the Tribunal of Monza in decision of November 9th, 2006</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribMonzaI_Int2.1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Monza interpretation 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribNapoliI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Napoli in decision of January 13th, 2005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribNapoliI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Napoli interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribNolaII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Nola 2nd section in decision of may 20th, 2008</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribNolaII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Nola interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribPiacenzaI_Int1</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Piacenza on sentence 507 of July 6th, 2009</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribPiacenzaI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Piacenza interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribPiacenzaI_Int2.1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Piacenza in decision n. 599 of September 21st, 2009</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribPiacenzaI_Int2.1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Piacenza interpretation 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribRomaIX_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Rome 9th section in decision n. 147 of January 4th, 2008</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribRomaIX_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Roma interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribSalernoI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Salerno 1st section in decision of October 31st, 2006</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribSalernoI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Salerno interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribSavonaI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Savona in decision of July 24th, 2005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribSavonaI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Savona interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribTorinoIII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Torino 3rd section in decision of October 1st, 2008</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribTorinoIII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Torino interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribTorinoIII_Int2.1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Torino 3rd section in decision n. 7785 of november 25th, 2008</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribTorinoIII_Int2.1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Torino interpretation 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribTorinoI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by Tribunal of Torino in sentence January 13th, 2003</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribTorinoI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Torino interpretation 3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribTorinoVIII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">interpretation by the Tribunal of Torino, 8th section, in decision of November 26th, 2005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribTorinoVIII_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Torino interpretation 4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribTraniI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Trani in decision n. 23 of January 23rd, 2009</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribTraniI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Trani interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribVeneziaI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Interpretation by the Tribunal of Venezia, in sentence of July 11th, 2002</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribVeneziaI_Int1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tribunal of Venezia interpretation 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Unilateral</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause was unilaterally predisponed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Unilateral</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Unilateral</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VF_BPTR_clauseX</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clause unknown of the contract between V. F. and F. B. srl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VF_BPTR_clauseX</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">V. F. / B. P. &amp; T. R. clause &#39;x&#39;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Valid_ExArt1341co1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A clause which is valid under article 1341 comma 1 civil code (not inefficacious)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Valid_ExArt1341co1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Valid under article 1341 comma 1 civil code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Valid_ExArt1341co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A clause which is valid (and therefore not inefficacious) under article 1341 comma 2 civil code.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Valid_ExArt1341co2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Valid under article 1341 comma 2 civil code</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     ontologyIRI="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="norm" IRI="http://www.estrellaproject.org/lkif-core/norm.owl#"/>
+    <Prefix name="owl2xml" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="legal-action" IRI="http://www.estrellaproject.org/lkif-core/legal-action.owl#"/>
+    <Prefix name="expression" IRI="http://www.estrellaproject.org/lkif-core/expression.owl#"/>
+    <Prefix name="Judging_Contracts_Core" IRI="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Import>http://www.estrellaproject.org/lkif-core/lkif-core.owl</Import>
+    <Declaration>
+        <Class IRI="#Adjudication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Agreement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contractual_Agreement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Judgement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Judicial_Claim"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Judicial_Interpretation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Judicial_Outcome"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Judicially_Qualified"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Jurisdiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Law_Declaration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Legal_Consequence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Legal_Rule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Legal_Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Material_Circumstance"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="expression:Communicated_Attitude"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="expression:Declaration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="expression:Expression"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="expression:Qualification"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="expression:Qualified"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="legal-action:Legislative_Body"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="legal-action:Public_Body"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="norm:Contract"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="norm:Legal_Document"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="norm:Legal_Expression"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="norm:Norm"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="norm:Precedent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#applied_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#applies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#considered_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#considers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:attitude"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:evaluated_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:evaluates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:held_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:medium"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:qualified_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="expression:qualifies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="norm:allowed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="norm:allows"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="norm:disallowed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="norm:disallows"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Judicially_Qualified"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#considered_by"/>
+            <Class IRI="#Judgement"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Adjudication"/>
+        <Class IRI="#Judgement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Adjudication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#applies"/>
+            <Class IRI="#Judicial_Outcome"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Adjudication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#considers"/>
+            <Class IRI="#Judicial_Claim"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Agreement"/>
+        <Class abbreviatedIRI="expression:Communicated_Attitude"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contractual_Agreement"/>
+        <Class abbreviatedIRI="expression:Expression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contractual_Agreement"/>
+        <Class abbreviatedIRI="norm:Norm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contractual_Agreement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#applies"/>
+            <Class IRI="#Legal_Status"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contractual_Agreement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#considers"/>
+            <Class IRI="#Material_Circumstance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contractual_Agreement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="expression:attitude"/>
+            <Class IRI="#Agreement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contractual_Agreement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="expression:medium"/>
+            <Class abbreviatedIRI="norm:Contract"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judgement"/>
+        <Class abbreviatedIRI="expression:Expression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judgement"/>
+        <Class abbreviatedIRI="expression:Qualification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judgement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="expression:attitude"/>
+            <Class IRI="#Jurisdiction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judgement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="expression:medium"/>
+            <Class abbreviatedIRI="norm:Precedent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judicial_Claim"/>
+        <Class IRI="#Judicially_Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judicial_Interpretation"/>
+        <Class IRI="#Judgement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judicial_Interpretation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#applies"/>
+            <Class IRI="#Legal_Status"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judicial_Interpretation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#considers"/>
+            <Class IRI="#Material_Circumstance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judicial_Outcome"/>
+        <Class IRI="#Judicially_Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judicially_Qualified"/>
+        <Class abbreviatedIRI="expression:Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Jurisdiction"/>
+        <Class abbreviatedIRI="expression:Declaration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Jurisdiction"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="expression:held_by"/>
+            <Class abbreviatedIRI="legal-action:Public_Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Law_Declaration"/>
+        <Class abbreviatedIRI="expression:Declaration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Law_Declaration"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="expression:held_by"/>
+            <Class abbreviatedIRI="legal-action:Legislative_Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legal_Consequence"/>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legal_Rule"/>
+        <Class abbreviatedIRI="norm:Legal_Expression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legal_Rule"/>
+        <Class abbreviatedIRI="norm:Norm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legal_Rule"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#applies"/>
+            <Class IRI="#Legal_Consequence"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legal_Rule"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#considers"/>
+            <Class IRI="#Legal_Status"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legal_Rule"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="expression:attitude"/>
+            <Class IRI="#Law_Declaration"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legal_Rule"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="expression:medium"/>
+            <Class abbreviatedIRI="norm:Legal_Document"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legal_Status"/>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Material_Circumstance"/>
+        <Class IRI="#Judicially_Qualified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Material_Circumstance"/>
+        <Class abbreviatedIRI="norm:Normatively_Qualified"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#applied_by"/>
+        <ObjectProperty abbreviatedIRI="expression:qualified_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#applies"/>
+        <ObjectProperty abbreviatedIRI="expression:qualifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#considered_by"/>
+        <ObjectProperty abbreviatedIRI="expression:qualified_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#considers"/>
+        <ObjectProperty abbreviatedIRI="expression:qualifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="expression:evaluated_by"/>
+        <ObjectProperty IRI="#considered_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="expression:evaluates"/>
+        <ObjectProperty IRI="#considers"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="norm:allowed_by"/>
+        <ObjectProperty IRI="#considered_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="norm:allows"/>
+        <ObjectProperty IRI="#considers"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="norm:disallowed_by"/>
+        <ObjectProperty IRI="#considered_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="norm:disallows"/>
+        <ObjectProperty IRI="#considers"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#applied_by"/>
+        <ObjectProperty IRI="#applies"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#considers"/>
+        <ObjectProperty IRI="#considered_by"/>
+    </InverseObjectProperties>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Adjudication</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The final assessment of a judge on a claim.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Adjudication</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Adjudication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Agreement</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The empowering attitude of contractual agreements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Agreement</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Agreement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contractual_Agreement</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The content of a contract. Takes into consideration a specific Material circumstance and applies a legal status to it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Contractual_Agreement</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Contractual Agreement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judgement</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The syntactic representation of a judicial decision&#39;s contents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judgement</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Judgement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judicial_Claim</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Is the claim brought in front of the judge by one of the parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judicial_Claim</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Judicial Claim</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judicial_Interpretation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Judicial interpretations are performative expressions contained in sentences (i.e. subsumptions). They take into consideration a Factual circumstance and apply a legal status to it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judicial_Interpretation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Judicial Interpretation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judicial_Outcome</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Judicial Outcome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:incompatibleWith"/>
+        <IRI>#Judicial_Outcome</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Is the outcome applied by the judge to every judicial claim. i.e. &quot;accepted&quot;, &quot;rejected&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Judicially_Qualified</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Anything that is qualified by a judicial expression.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Judicially_Qualified</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Judicially Qualified</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Jurisdiction</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The empowering attitude of judgements</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Jurisdiction</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Jurisdiction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Law_Declaration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The empowering attitude of legal rules</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Law_Declaration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Law Declaration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Legal_Consequence</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A legal consequence is the consequent of a legal rule. In the form of regulative rules &quot;if A then B&quot;, B is the Legal Consequence. i.e. a sanction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Legal_Consequence</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Legal Consequence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Legal_Rule</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The content of a legal document. considers anything having a given (combination of) legal status(es) and applies a (combination of) legal consequence(s) to it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Legal_Rule</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Legal Rule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Legal_Status</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A legal status is an abstract concept which is created by a law (or more rarely by doctrine or customs). It can be taken by a judgement or a contract and applied to some Factual circumstance, more or less arbitrarily. I.e. &quot;knowable&quot; is a legal status.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Legal_Status</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Legal Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Material_Circumstance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">a Factual Circumstance is any fact or act which occurred in the Factual world, and which is taken into consideration by a law, a contract, or a judgement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Material_Circumstance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Material Circumstance</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
